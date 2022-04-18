@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@400;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Whisper&display=swap");
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	height: 100vh;
+	font-family: "poppins";
+	font-size: 1.1rem;
+}
+
+.side-by-side {
+	display: flex;
+	justify-content: space-around;
+}
+.fieldset {
+	flex-direction: column;
+	legend {
+		text-decoration: underline;
+		font-family: "Montserrat";
+		font-weight: 500;
+	}
+}
+.heading {
+	text-decoration: underline;
+}
+
+h1 {
+	display: flex;
+	justify-content: center;
+	text-decoration: underline;
+	font-family: "Montserrat";
+	font-size: 2rem;
+}
+
+.url-group {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-block-end: 1em;
+	input {
+		width: 70vw;
+		height: 1.5rem;
+	}
+}
+.navbar {
+	h3 {
+		font-family: "Whisper";
+		font-size: 2rem;
+		margin-block: 0.5em;
+		margin-inline: auto;
+		width: max-content;
+		text-decoration: underline;
+	}
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	// align-items: center;
+	* {
+		display: flex;
+	}
+}
+.container-head {
+	width: 80vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
