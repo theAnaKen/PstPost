@@ -49,7 +49,7 @@ h1 {
 		font-family: "Whisper";
 		font-size: 2rem;
 		margin-block: 0.5em;
-		margin-inline: auto;
+		margin-inline-start: 1rem;
 		width: max-content;
 		text-decoration: underline;
 	}
@@ -69,4 +69,72 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+#parameterBox {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	margin-block-start: 1rem;
+	input {
+		width: 30vw;
+		height: 1.3rem;
+	}
+
+	p {
+		margin: 0;
+		text-decoration: underline;
+	}
+}
+
+#Json {
+	margin-block-start: 1rem;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	textarea#Json-Box {
+		max-width: 30rem;
+		width: 60vw;
+		height: 10rem;
+		resize: vertical;
+	}
+}
+
+button.btn {
+	padding: 0.05em;
+	font-size: 1.2rem;
+}
+
+hr {
+	height: 0.1rem;
+	width: 40vw;
+	border: 0.2rem dashed;
+	border-radius: 1rem;
+}
+
+#submit {
+	margin-block-start: 2em;
+	margin-inline: 3rem;
+	display: flex;
+	justify-content: center;
+	// position: relative;
+	.btn {
+		width: 100%;
+		max-width: 40rem;
+		// transform: translateX(10vw);
+		right: auto;
+	}
+}
+
+#Response {
+	display: grid;
+	place-items: center;
+	flex-direction: column;
+	margin-block: 2rem;
+	textarea {
+		max-width: 30rem;
+		width: 60vw;
+		height: 10rem;
+		resize: vertical;
+	}
 }
