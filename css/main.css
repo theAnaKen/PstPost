@@ -84,11 +84,18 @@ h1 {
 }
 #parameterBox input {
   width: 30vw;
-  height: 1.3rem;
+  height: 1.43rem;
+  -webkit-padding-before: 0.2em;
+          padding-block-start: 0.2em;
 }
 #parameterBox p {
   margin: 0;
   text-decoration: underline;
+}
+#parameterBox .btn {
+  padding-inline: 0.5em;
+  -webkit-padding-after: 0.13rem;
+          padding-block-end: 0.13rem;
 }
 
 #Json {
@@ -141,4 +148,41 @@ hr {
   width: 60vw;
   height: 10rem;
   resize: vertical;
+}
+
+@media (max-width: 500px) {
+  .side-by-side {
+    flex-direction: column;
+    width: 80vw;
+    margin-inline: auto;
+  }
+
+  #parameterBox {
+    flex-direction: column;
+    justify-content: center;
+    place-content: center;
+  }
+  #parameterBox p {
+    text-align: center;
+  }
+  #parameterBox .input {
+    flex-direction: row;
+    margin: auto;
+  }
+  #parameterBox .input input {
+    width: 30vw;
+    -webkit-margin-end: 1em;
+            margin-inline-end: 1em;
+  }
+
+  #Response fieldset {
+    display: grid;
+    place-items: center;
+  }
+
+  #Json {
+    text-decoration: underline;
+    display: grid;
+    place-items: center;
+  }
 }/*# sourceMappingURL=main.css.map */

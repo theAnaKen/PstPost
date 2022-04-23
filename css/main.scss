@@ -78,12 +78,17 @@ h1 {
 	margin-block-start: 1rem;
 	input {
 		width: 30vw;
-		height: 1.3rem;
+		height: 1.43rem;
+		padding-block-start: 0.2em;
 	}
 
 	p {
 		margin: 0;
 		text-decoration: underline;
+	}
+	.btn {
+		padding-inline: 0.5em;
+		padding-block-end: 0.13rem;
 	}
 }
 
@@ -136,5 +141,44 @@ hr {
 		width: 60vw;
 		height: 10rem;
 		resize: vertical;
+	}
+}
+
+@media (max-width: 500px) {
+	.side-by-side {
+		flex-direction: column;
+		// background-color: #fff;
+		width: 80vw;
+		// justify-content: center;
+		margin-inline: auto;
+	}
+	#parameterBox {
+		flex-direction: column;
+		justify-content: center;
+		place-content: center;
+		// gap: 20rem;
+		p {
+			text-align: center;
+		}
+		.input {
+			flex-direction: row;
+			// width: max-content;
+			margin: auto;
+			input {
+				width: 30vw;
+				margin-inline-end: 1em;
+			}
+		}
+	}
+	#Response {
+		fieldset {
+			display: grid;
+			place-items: center;
+		}
+	}
+	#Json {
+		text-decoration: underline;
+		display: grid;
+		place-items: center;
 	}
 }
