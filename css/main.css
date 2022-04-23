@@ -75,24 +75,24 @@ h1 {
   align-items: center;
 }
 
-#parameterBox {
+.parameterBox {
   display: flex;
   justify-content: center;
   gap: 1rem;
   -webkit-margin-before: 1rem;
           margin-block-start: 1rem;
 }
-#parameterBox input {
+.parameterBox input {
   width: 30vw;
   height: 1.43rem;
   -webkit-padding-before: 0.2em;
           padding-block-start: 0.2em;
 }
-#parameterBox p {
+.parameterBox p {
   margin: 0;
   text-decoration: underline;
 }
-#parameterBox .btn {
+.parameterBox .btn {
   padding-inline: 0.5em;
   -webkit-padding-after: 0.13rem;
           padding-block-end: 0.13rem;
@@ -157,19 +157,19 @@ hr {
     margin-inline: auto;
   }
 
-  #parameterBox {
+  .parameterBox {
     flex-direction: column;
     justify-content: center;
     place-content: center;
   }
-  #parameterBox p {
+  .parameterBox p {
     text-align: center;
   }
-  #parameterBox .input {
+  .parameterBox .input {
     flex-direction: row;
     margin: auto;
   }
-  #parameterBox .input input {
+  .parameterBox .input input {
     width: 30vw;
     -webkit-margin-end: 1em;
             margin-inline-end: 1em;

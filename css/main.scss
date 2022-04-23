@@ -71,7 +71,7 @@ h1 {
 	align-items: center;
 }
 
-#parameterBox {
+.parameterBox {
 	display: flex;
 	justify-content: center;
 	gap: 1rem;
@@ -152,7 +152,7 @@ hr {
 		// justify-content: center;
 		margin-inline: auto;
 	}
-	#parameterBox {
+	.parameterBox {
 		flex-direction: column;
 		justify-content: center;
 		place-content: center;
