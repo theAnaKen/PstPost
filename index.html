@@ -20,7 +20,7 @@
 		</nav>
 
 		<div class="container">
-			<h1 class="my-3">Welcome to Pst Post</h1>
+			<h1 class="head">Welcome to Pst Post</h1>
 		</div>
 		<div class="container-Head">
 			<!-- Url Box -->
@@ -32,38 +32,36 @@
 
 			<div class="side-by-side">
 				<div class="container-feildset">
-					<fieldset class="fieldset">
+					<fieldset id="reqType" class="fieldset">
 						<legend class="heading">Request Type:</legend>
 
-						<div class="form-check">
-							<input class="form-check-input" type="radio" name="get-or-post" id="get" value="get" />
-							<label class="form-check-label" for="get">
+						<div>
+							<input type="radio" name="get-or-post" id="get" value="get" checked />
+							<label for="get">
 								GET
 							</label>
 						</div>
-						<div class="form-check">
-							<input class="form-check-input" type="radio" name="get-or-post" id="post" value="post" />
-							<label class="form-check-label" for="post">
+						<div>
+							<input type="radio" name="get-or-post" id="post" value="post" />
+							<label for="post">
 								POST
 							</label>
 						</div>
 					</fieldset>
 				</div>
 				<!-- Content Type Box -->
-				<div class="container my-4">
-					<fieldset class="fieldset">
+				<div class="container ">
+					<fieldset id="contentType" class="fieldset">
 						<legend class="heading">Content Type:</legend>
-						<div class="form-check">
-							<input class="form-check-input" type="radio" name="content-type" id="json" value="json"
-								checked />
-							<label class="form-check-label" for="json">
+						<div>
+							<input type="radio" name="content-type" id="json" value="json" checked />
+							<label for="json">
 								JSON
 							</label>
 						</div>
-						<div class="form-check">
-							<input class="form-check-input" type="radio" name="content-type" id="custom"
-								value="custom" />
-							<label class="form-check-label" for="custom">
+						<div>
+							<input type="radio" id="custom" name="content-type" value="custom" />
+							<label for="custom">
 								Custom Parameters
 							</label>
 						</div>
@@ -76,8 +74,8 @@
 			<p>Parameter 1:</p>
 			<div class="input">
 
-				<input type="text" placeholder="Parameter 1 Key">
-				<input type="text" placeholder="Parameter 1 Value">
+				<input type="text" id="key1" placeholder="Parameter 1 Key">
+				<input type="text" id="value1" placeholder="Parameter 1 Value">
 				<button class="btn"> + </button>
 			</div>
 		</div>
@@ -86,7 +84,7 @@
 		<!-- show when JSON is selected -->
 		<div id="Json">
 			<label for="Json-Box">Request Json:</label>
-			<textarea id="Json-Box"></textarea>
+			<textarea class="textarea" id="Json-Box"></textarea>
 		</div>
 		<div id="submit">
 			<button class="btn">
@@ -98,7 +96,7 @@
 			<fieldset>
 
 				<legend for="response-box" class="heading">Your response will appear here:</legend>
-				<textarea id="response-box"></textarea>
+				<textarea id="response-box" class="textarea"></textarea>
 			</fieldset>
 		</div>
 		<footer>
