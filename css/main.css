@@ -82,9 +82,17 @@ h1 {
   align-items: center;
 }
 
+#params-container {
+  margin: auto;
+  display: grid;
+  place-items: center;
+  width: 80vw;
+}
+
 .parameterBox {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   gap: 1rem;
   -webkit-margin-before: 1rem;
           margin-block-start: 1rem;
@@ -148,7 +156,8 @@ hr {
   display: grid;
   place-items: center;
   flex-direction: column;
-  margin-block: 2rem;
+  -webkit-margin-after: 2rem;
+          margin-block-end: 2rem;
 }
 #Response textarea {
   max-width: 30rem;

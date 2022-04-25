@@ -1,7 +1,8 @@
 // Getting DOM elements
 const urlBox = document.getElementById("url");
 
-const jsonBox = document.getElementById("Json");
+const jsonDiv = document.getElementById("Json");
+const jsonBox = document.getElementById("Json-Box");
 const jsonRadio = document.getElementById("json");
 
 const paramsRadio = document.getElementById("custom");
@@ -27,14 +28,17 @@ parametersBox.style.display = "none";
 
 // If user clickes on "JSON", hide Parameter box
 paramsRadio.addEventListener("click", (e) => {
-	jsonBox.style.display = "none";
+	jsonDiv.style.display = "none";
+	params.style.display = "grid";
+
 	parametersBox.style.display = "flex";
 });
 
 // If user clicks on "Custom Parameter", hide Json box
 jsonRadio.addEventListener("click", (e) => {
 	parametersBox.style.display = "none";
-	jsonBox.style.display = "grid";
+	params.style.display = "none";
+	jsonDiv.style.display = "grid";
 });
 
 // No. of params
@@ -50,12 +54,12 @@ addParams.addEventListener("click", (e) => {
     <p>Parameter ${addedParams + 2}:</p>
     <div class="input">
     
-    <input type="text" id="key${
+    <input type="text" id="key${addedParams + 2}" placeholder="Parameter ${
 		addedParams + 2
-	}" placeholder="Parameter ${addedParams} Key">
-    <input type="text" id="value${
+	} Key">
+    <input type="text" id="value${addedParams + 2}" placeholder="Parameter ${
 		addedParams + 2
-	}" placeholder="Parameter ${addedParams} Value">
+	} Value">
     <button class="btn remove"> - </button>
     </div>`;
 	addedParams++;
@@ -84,6 +88,8 @@ submitBtn.addEventListener("click", (e) => {
 		.getElementById("reqType")
 		.querySelector("input:checked");
 
+	console.dir(requestType);
+
 	const contentType = document
 		.getElementById("contentType")
 		.querySelector("input:checked");
@@ -100,7 +106,43 @@ submitBtn.addEventListener("click", (e) => {
 			const key = document.getElementById("key" + (i + 1)).value;
 			const value = document.getElementById("value" + (i + 1)).value;
 			data[key] = value;
-			console.log(data);
+			// console.log(data);
+			// console.log(typeof data);
 		}
+		data = JSON.stringify(data);
+		// console.log(typeof data);
+	} else {
+		data = jsonBox.value;
+		// console.log(typeof data);
+	}
+
+	// If the req type is get, use FetchAPI to send a get request
+
+	if (requestType.value === "get") {
+		fetch(urlBox.value, {
+			method: "GET",
+		})
+			.then((res) => {
+				return res.text();
+			})
+			.then((data) => {
+				// console.log(data);
+				responseBox.value = data;
+			});
+	} else {
+		fetch(urlBox.value, {
+			method: "POST",
+			body: data,
+			headers: {
+				"Content-type": "application/json; charset=UTF-8",
+			},
+		})
+			.then((res) => {
+				return res.text();
+			})
+			.then((data) => {
+				// console.log(data);
+				responseBox.value = data;
+			});
 	}
 });

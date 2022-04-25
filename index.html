@@ -70,16 +70,20 @@
 			</div>
 		</div>
 		<!-- show only when custom parameters is selected  -->
-		<div class="parameterBox">
-			<p>Parameter 1:</p>
-			<div class="input">
+		<div id="params-container">
 
-				<input type="text" id="key1" placeholder="Parameter 1 Key">
-				<input type="text" id="value1" placeholder="Parameter 1 Value">
-				<button class="btn"> + </button>
+			<div class="parameterBox">
+				<p>Parameter 1:</p>
+				<div class="input">
+
+					<input type="text" id="key1" class="textarea" placeholder="Parameter 1 Key">
+					<input type="text" id="value1" class="textarea" placeholder="Parameter 1 Value">
+					<button class="btn"> + </button>
+				</div>
 			</div>
+			<div id="params"></div>
 		</div>
-		<div id="params"></div>
+
 		<!-- Json Requst Box -->
 		<!-- show when JSON is selected -->
 		<div id="Json">
