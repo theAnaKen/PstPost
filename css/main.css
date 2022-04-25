@@ -82,6 +82,10 @@ h1 {
   align-items: center;
 }
 
+#post-related-stuff-here {
+  display: none;
+}
+
 #params-container {
   margin: auto;
   display: grid;

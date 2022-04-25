@@ -50,23 +50,26 @@
 					</fieldset>
 				</div>
 				<!-- Content Type Box -->
-				<div class="container ">
-					<fieldset id="contentType" class="fieldset">
-						<legend class="heading">Content Type:</legend>
-						<div>
-							<input type="radio" name="content-type" id="json" value="json" checked />
-							<label for="json">
-								JSON
-							</label>
-						</div>
-						<div>
-							<input type="radio" id="custom" name="content-type" value="custom" />
-							<label for="custom">
-								Custom Parameters
-							</label>
-						</div>
-					</fieldset>
-				</div>
+
+				<section id="post-related-stuff-here">
+
+					<div class="container ">
+						<fieldset id="contentType" class="fieldset">
+							<legend class="heading">Content Type:</legend>
+							<div>
+								<input type="radio" name="content-type" id="json" value="json" checked />
+								<label for="json">
+									JSON
+								</label>
+							</div>
+							<div>
+								<input type="radio" id="custom" name="content-type" value="custom" />
+								<label for="custom">
+									Custom Parameters
+								</label>
+							</div>
+						</fieldset>
+					</div>
 			</div>
 		</div>
 		<!-- show only when custom parameters is selected  -->
@@ -90,6 +93,8 @@
 			<label for="Json-Box">Request Json:</label>
 			<textarea class="textarea" id="Json-Box"></textarea>
 		</div>
+		</section>
+
 		<div id="submit">
 			<button class="btn">
 				Submit
